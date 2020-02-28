@@ -1,0 +1,7 @@
+<div class="categories">
+    <div *ngFor="let category of categories">
+        <div routerLink="{{category.path}}">{{ category.name }}</div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

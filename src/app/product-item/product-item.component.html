@@ -1,0 +1,29 @@
+  <div class="item">
+  <div class="item_header">
+  <h3>
+    <a [title]="aliexpress_product.name + ' description'">
+      {{ aliexpress_product.name }}
+    </a>
+  </h3>
+  <p *ngIf="aliexpress_product.rating" class="item_rating">
+    <i class="material-icons">star</i>
+    {{ aliexpress_product.rating }} / 10
+  </p>
+  </div>
+
+  <div class="item-carousel">
+      <!-- <div class="left"></div> -->
+      <img [src]=" aliexpress_product.image " alt="">
+      <!-- <div class="right"></div> -->
+  </div>
+
+
+  <p *ngIf="aliexpress_product.description" class="item_description">
+    Description: {{ aliexpress_product.description }}
+  </p> 
+  <div class="item_button">
+    <button class="link" (click)="redirect(aliexpress_product.link)">Redirect</button>
+    <a class="share" href="https://web.telegram.org/#/login{{aliexpress_product.link}};"><i class="material-icons">share</i>
+    </a>
+  </div>
+</div>
